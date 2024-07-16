@@ -1,0 +1,16 @@
+services:
+  mindsdb:
+    container_name: mdb_container
+    image: mindsdb/mindsdb:latest
+    ports:
+      - "47334:47334"
+      - "47335:47335"
+    volumes:
+      - ./mdb_data:/root/mdb_storage
+    network_mode: "host"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
