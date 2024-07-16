@@ -28,6 +28,29 @@
   ![Screenshot from 2024-07-16 17-09-46](https://github.com/user-attachments/assets/2f5230a9-c0fa-4d02-8eae-0166ddce5b19)
   ![Screenshot from 2024-07-16 17-26-12](https://github.com/user-attachments/assets/c14cd699-c344-4433-913b-cb59f67009ef)
 
+<hr>
 
+## Project setup
 
-### Check out SETUP.md to run locally
+### Ollama mistral setup
+
+- Install Ollama [Link](https://ollama.com/)
+- Download Mistral model after installing ollama by running
+  `ollama run mistral`
+
+### Mindsdb setup
+
+- Run `docker compose up` if you want to run mindsdb with gpu or `docker run --name mindsdb_container -p 47334:47334 -p 47335:47335 mindsdb/mindsdb` to run mindsdb with cpu
+- Follow the instruction to install dependencies if needed [Link](https://docs.mindsdb.com/setup/self-hosted/docker#install-dependencies)
+- Open mindsdb editor and run the command from mdb.sql one by one
+- Make sure ollama is running
+
+### Project setup
+
+- create virtual environment `python3 -m venv .ven`
+- Activate virtual environment `source .venv/bin/activate`
+- Install requirements files `pip install -r requirements.txt`
+- Install json-server `npm install -g json-server`
+- Run json-server with db.json `json-server db.json --watch`
+- Run streamlit using `streamlit run Home.py`
+
